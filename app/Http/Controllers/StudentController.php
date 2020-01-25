@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
 {
+    //原始sql
     public function info5()
     {
         $students = DB::select('select * from student');
@@ -16,4 +17,28 @@ class StudentController extends Controller
 
         DB::delete("delete from student where id=?", [2]);
     }
+
+    //查询构建器
+    public function info6()
+    {
+        //增加
+        // $bool = DB::table('student')->insert(['id' => '2', 'name' => '沙僧']);
+
+        // $id = DB::table('student')->insertGetId(
+        //     ['id' => '6', 'name' => '沙僧']);
+
+        //更新
+        // DB::table('student')->where('id',6)->update(['age'=>50]);
+
+        //自增
+        // $num = DB::table('student')->increment('age');
+        // $num = DB::table('student')->decrement('age',3);
+        // print_r($num);
+
+        //删除
+        DB::table('student')->where('id','>=',6)->delete();
+        // DB::table('student')->truncate();
+
+    }
+
 }
