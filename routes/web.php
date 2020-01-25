@@ -89,4 +89,11 @@ Route::get('member/info4', [
 ]);
 
 
+//返回原始的sql
+Route::get('student/info5', [
+    'uses' => 'StudentController@info5',
+    'as' => 'studentinfo5'
+]);
+
+
 

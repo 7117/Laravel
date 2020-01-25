@@ -10,7 +10,4 @@ class Member extends Model
     {
         return 'mid:100';
     }
-
-
-
 }
