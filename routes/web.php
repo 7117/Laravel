@@ -13,9 +13,7 @@
 
 use function foo\func;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/post', function () {
     return 'post';
@@ -50,5 +48,22 @@ Route::get('para/name2/{name2?}/{id?}', function ($name2 = 'sun',$id='111') {
 })->where(['name2'=>'[A-Za-z]+','id'=>'[0-9]+']);
 
 
+//路由别名:就是把别名加入了route组件中
+Route::get('route/direct',['as'=>'tion',function(){
+    return array("tion",route('tion'));
+}]);
 
+//路由群组:目的是简化前缀一样的
+Route::group(['prefix'=>'group'],function(){
+    Route::get('route/1',['as'=>'1',function(){
+        return array("1",route('1'));
+    }]);
+    Route::get('route/2',['as'=>'2',function(){
+        return array("2",route('2'));
+    }]);
+});
 
+// 路由中输出视图
+Route::get('/', function () {
+    return view('welcome');
+});
