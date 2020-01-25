@@ -14,7 +14,6 @@
 use function foo\func;
 
 
-
 Route::get('/post', function () {
     return 'post';
 });
@@ -35,7 +34,7 @@ Route::get('para/{id}', function ($id) {
 //自定义的默认参数
 Route::get('para/i/{name2?}', function ($name2 = 'sun') {
     return "para/i/{$name2}";
-})->where('name2','[A-Za-z]+');
+})->where('name2', '[A-Za-z]+');
 
 //自定义的参数
 Route::get('para/name/{name2?}', function ($name2 = 'sun') {
@@ -43,23 +42,23 @@ Route::get('para/name/{name2?}', function ($name2 = 'sun') {
 })->where('name2', '[A-Za-z]+');
 
 //自定义两个参数
-Route::get('para/name2/{name2?}/{id?}', function ($name2 = 'sun',$id='111') {
+Route::get('para/name2/{name2?}/{id?}', function ($name2 = 'sun', $id = '111') {
     return "para/name/{$name2}/{$id}";
-})->where(['name2'=>'[A-Za-z]+','id'=>'[0-9]+']);
+})->where(['name2' => '[A-Za-z]+', 'id' => '[0-9]+']);
 
 
 //路由别名:就是把别名加入了route组件中
-Route::get('route/direct',['as'=>'tion',function(){
-    return array("tion",route('tion'));
+Route::get('route/direct', ['as' => 'tion', function () {
+    return array("tion", route('tion'));
 }]);
 
 //路由群组:目的是简化前缀一样的
-Route::group(['prefix'=>'group'],function(){
-    Route::get('route/1',['as'=>'1',function(){
-        return array("1",route('1'));
+Route::group(['prefix' => 'group'], function () {
+    Route::get('route/1', ['as' => '1', function () {
+        return array("1", route('1'));
     }]);
-    Route::get('route/2',['as'=>'2',function(){
-        return array("2",route('2'));
+    Route::get('route/2', ['as' => '2', function () {
+        return array("2", route('2'));
     }]);
 });
 
@@ -67,3 +66,14 @@ Route::group(['prefix'=>'group'],function(){
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// 代码中会使用到
+Route::get('member/info', 'MemberController@info');
+
+//返回route的url
+Route::get('member/info2', [
+    'uses' => 'MemberController@info2',
+    'as' => 'memberinfo2'
+]);
+
