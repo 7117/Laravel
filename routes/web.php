@@ -100,5 +100,10 @@ Route::get('student/info6', [
     'as' => 'studentinfo6'
 ]);
 
+//聚合函数
+Route::get('student/info7', [
+    'uses' => 'StudentController@info7',
+    'as' => 'studentinfo7'
+]);
 
 

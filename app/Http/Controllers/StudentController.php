@@ -41,4 +41,23 @@ class StudentController extends Controller
 
     }
 
+    //info7
+    public function info7()
+    {
+        $count=DB::table('student')->count();
+        print_r($count);
+        $age=DB::table('student')->max('age');
+        print_r("  ");
+        print_r($age);
+        $min=DB::table('student')->min('age');
+        print_r("  ");
+        print_r($min);
+        $avg=DB::table('student')->avg('age');
+        print_r("  ");
+        print_r($avg);
+
+    }
+
+    
+
 }
