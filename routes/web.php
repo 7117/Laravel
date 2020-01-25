@@ -67,7 +67,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 // 代码中会使用到
 Route::get('member/info', 'MemberController@info');
 
@@ -76,4 +75,11 @@ Route::get('member/info2', [
     'uses' => 'MemberController@info2',
     'as' => 'memberinfo2'
 ]);
+
+//返回info3
+Route::get('member/info3', [
+    'uses' => 'MemberController@info3',
+    'as' => 'memberinfo3'
+]);
+
 
