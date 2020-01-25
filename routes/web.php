@@ -82,4 +82,11 @@ Route::get('member/info3', [
     'as' => 'memberinfo3'
 ]);
 
+//返回info4
+Route::get('member/info4', [
+    'uses' => 'MemberController@info4',
+    'as' => 'memberinfo4'
+]);
+
+
 

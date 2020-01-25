@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Member;
+
 class MemberController extends Controller
 {
     public function info()
@@ -21,4 +23,13 @@ class MemberController extends Controller
             'age' => '20岁'
         ]);
     }
+
+    public function info4()
+    {
+        $member = new Member();
+        $info = $member->getMember();
+        print_r($info);
+        die();
+    }
+
 }
