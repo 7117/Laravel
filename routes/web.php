@@ -106,4 +106,28 @@ Route::get('student/info7', [
     'as' => 'studentinfo7'
 ]);
 
+//聚合函数
+Route::get('student/info8', [
+    'uses' => 'StudentController@info8',
+    'as' => 'studentinfo8'
+]);
 
+Route::get('student/info9', [
+    'uses' => 'StudentController@info9',
+    'as' => 'studentinfo9'
+]);
+
+Route::get('student/info10', [
+    'uses' => 'StudentController@info10',
+    'as' => 'studentinfo10'
+]);
+
+Route::get('student/info11', [
+    'uses' => 'StudentController@info11',
+    'as' => 'studentinfo11'
+]);
+
+Route::get('student/info12', [
+    'uses' => 'StudentController@info12',
+    'as' => 'studentinfo12'
+]);

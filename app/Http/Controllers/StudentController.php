@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
@@ -36,7 +37,7 @@ class StudentController extends Controller
         // print_r($num);
 
         //删除
-        DB::table('student')->where('id','>=',6)->delete();
+        DB::table('student')->where('id', '>=', 6)->delete();
         // DB::table('student')->truncate();
 
     }
@@ -44,20 +45,76 @@ class StudentController extends Controller
     //info7
     public function info7()
     {
-        $count=DB::table('student')->count();
+        $count = DB::table('student')->count();
         print_r($count);
-        $age=DB::table('student')->max('age');
+        $age = DB::table('student')->max('age');
         print_r("  ");
         print_r($age);
-        $min=DB::table('student')->min('age');
+        $min = DB::table('student')->min('age');
         print_r("  ");
         print_r($min);
-        $avg=DB::table('student')->avg('age');
+        $avg = DB::table('student')->avg('age');
         print_r("  ");
         print_r($avg);
 
     }
 
-    
+    //orm
+    public function info8()
+    {
+        $student = Student::all();
+        // dd($student);
 
+        $every = Student::find(5);
+        // dd($every);
+
+        $get = Student::get();
+        // dd($get);
+
+        $info = Student::where('id', '>=', '5')->orderBy('age', 'desc')->first();
+        // dd(count($info));
+
+        Student::chunk(2, function ($chunk) {
+            // dd($chunk);
+        });
+
+        $count = Student::count();
+        // dd($count);
+
+
+    }
+
+    public function info9()
+    {
+        //批量新增
+        $stu = Student::create([
+            'name' => 'li',
+            'age' => 20
+        ]);
+    }
+
+    public function info10()
+    {
+        //如果没有就新增 有的话不变化
+        $stu=Student::firstOrCreate(
+            ['name'=>'info10']
+        );
+    }
+
+    public function info11()
+    {
+        //如果没有就新增 有的话不变化
+        $stu = Student::firstOrNew(
+            ['name' => 'info11']
+        );
+        $stu->save();
+    }
+
+    public function info12()
+    {
+        $stu = Student::find(1);
+        $stu->name = 'info12';
+        $stu->age = 5;
+        $stu->save();
+    }
 }
