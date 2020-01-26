@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
 {
@@ -135,19 +136,66 @@ class StudentController extends Controller
         $all = $request->all();
         // print_r($all);
 
-        $method=$request->method();
+        $method = $request->method();
         // print_r($method);
 
-        $isMethod=$request->isMethod('GET');
+        $isMethod = $request->isMethod('GET');
         // print_r($isMethod);
 
-        $ajax=$request->ajax();
+        $ajax = $request->ajax();
 
-        $is=$request->is('student/*');
+        $is = $request->is('student/*');
         // print_r($is);
 
-        $url=$request->url();
-        print_r($url);
+        $url = $request->url();
+        // print_r($url);
+
+    }
+
+    public function info15(Request $request)
+    {
+        $request->session()->put('key', 'value');
+
+        session()->put('key2','value2');
+
+        Session::put('key3','value3');
+
+        Session::push('key4','value4');
+
+        //生效一次
+        Session::flash('key7','value7');
+    }
+
+    public function info16(Request $request)
+    {
+        $session = $request->session()->get('key');
+        // print_r($session);
+
+        $value2=session()->get('key2');
+        // print_r($value2);
+
+        $value3=Session::get('key3');
+        // print_r($value3);
+
+        $value4=Session::get('key4');
+        // print_r($value4);
+
+        //取出并且进行删除
+        // $value5=Session::pull('key4');
+        // print_r($value5);
+
+        if(Session::has('key4')){
+            echo "key4";
+        }
+
+        //删除
+        Session::forget('key4');
+        //删除所有
+        Session::flush();
+        //所有信息
+        Session::all();
+
+        Session::get('key7');
 
     }
 

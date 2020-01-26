@@ -141,3 +141,18 @@ Route::get('student/info14', [
     'uses' => 'StudentController@info14',
     'as' => 'info14'
 ]);
+
+
+Route::group(
+    ['middleware'=>['web']],
+    function(){
+        Route::get('student/info15', [
+            'uses' => 'StudentController@info15',
+            'as' => 'info15'
+        ]);
+        Route::get('student/info16', [
+            'uses' => 'StudentController@info16',
+            'as' => 'info16'
+        ]);
+    }
+);
