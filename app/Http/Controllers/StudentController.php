@@ -112,9 +112,18 @@ class StudentController extends Controller
 
     public function info12()
     {
-        $stu = Student::find(1);
-        $stu->name = 'info12';
-        $stu->age = 5;
-        $stu->save();
+        $arr = 'sean';
+
+        $num = array(5, 6, 7);
+        return view('student.stu', [
+            'name' => $arr,
+            'num' => $num
+        ]);
     }
+
+    public function info13()
+    {
+        return view('student.stu3');
+    }
+
 }

@@ -131,3 +131,8 @@ Route::get('student/info12', [
     'uses' => 'StudentController@info12',
     'as' => 'studentinfo12'
 ]);
+
+Route::get('student/info13', [
+    'uses' => 'StudentController@info13',
+    'as' => 'info13'
+]);
