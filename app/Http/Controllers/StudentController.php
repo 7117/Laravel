@@ -213,6 +213,18 @@ class StudentController extends Controller
         // return redirect()->back();
     }
 
+    public function act0()
+    {
+        return '活动快要开始了';
+    }
 
+    public function act1()
+    {
+        return '进行中1';
+    }
 
+    public function act2()
+    {
+        return '进行中2';
+    }
 }

@@ -144,8 +144,8 @@ Route::get('student/info14', [
 
 
 Route::group(
-    ['middleware'=>['web']],
-    function(){
+    ['middleware' => ['web']],
+    function () {
         Route::get('student/info15', [
             'uses' => 'StudentController@info15',
             'as' => 'info15'
@@ -161,3 +161,26 @@ Route::get('student/info17', [
     'uses' => 'StudentController@info17',
     'as' => 'info17'
 ]);
+
+
+//宣传
+Route::get('student/act0', [
+    'uses' => 'StudentController@act0',
+    'as' => 'act0'
+]);
+
+//活动中
+Route::group(
+    ['middleware' => ['act']],
+    function () {
+        Route::get('student/act1', [
+            'uses' => 'StudentController@act1',
+            'as' => 'act1'
+        ]);
+
+        Route::get('student/act2', [
+            'uses' => 'StudentController@act2',
+            'as' => 'act2'
+        ]);
+    }
+);
