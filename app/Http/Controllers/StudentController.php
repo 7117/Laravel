@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
@@ -96,8 +97,8 @@ class StudentController extends Controller
     public function info10()
     {
         //如果没有就新增 有的话不变化
-        $stu=Student::firstOrCreate(
-            ['name'=>'info10']
+        $stu = Student::firstOrCreate(
+            ['name' => 'info10']
         );
     }
 
@@ -125,5 +126,30 @@ class StudentController extends Controller
     {
         return view('student.stu3');
     }
+
+    public function info14(Request $request)
+    {
+        //取值
+        $name = $request->input('name');
+
+        $all = $request->all();
+        // print_r($all);
+
+        $method=$request->method();
+        // print_r($method);
+
+        $isMethod=$request->isMethod('GET');
+        // print_r($isMethod);
+
+        $ajax=$request->ajax();
+
+        $is=$request->is('student/*');
+        // print_r($is);
+
+        $url=$request->url();
+        print_r($url);
+
+    }
+
 
 }
