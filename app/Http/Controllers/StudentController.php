@@ -199,5 +199,20 @@ class StudentController extends Controller
 
     }
 
+    public function info17(Request $request)
+    {
+        $data=array('a','b','c');
+
+        $data=response()->json($data);
+
+        // return $data;
+
+        // return redirect('student/info7');
+        // return redirect()->action('StudentController@info7');
+        // return redirect()->route('studentinfo7');
+        // return redirect()->back();
+    }
+
+
 
 }

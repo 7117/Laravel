@@ -156,3 +156,8 @@ Route::group(
         ]);
     }
 );
+
+Route::get('student/info17', [
+    'uses' => 'StudentController@info17',
+    'as' => 'info17'
+]);
