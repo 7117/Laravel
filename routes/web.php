@@ -214,3 +214,13 @@ Route::any('cache2', [
     'uses' => 'CacheController@cache2',
     'as' => 'cache2'
 ]);
+
+Route::any('log', [
+    'uses' => 'LogController@log',
+    'as' => 'log'
+]);
+
+Route::any('queue', [
+    'uses' => 'QueueController@queue',
+    'as' => 'queue'
+]);
