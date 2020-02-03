@@ -192,3 +192,20 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::any('upload', [
+    'uses' => 'UploadController@upload',
+    'as' => 'upload'
+]);
+
+Route::any('email', [
+    'uses' => 'EmailController@email',
+    'as' => 'email'
+]);
+
+Route::any('email2', [
+    'uses' => 'EmailController@email2',
+    'as' => 'email2'
+]);
