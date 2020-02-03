@@ -205,7 +205,12 @@ Route::any('email', [
     'as' => 'email'
 ]);
 
-Route::any('email2', [
-    'uses' => 'EmailController@email2',
-    'as' => 'email2'
+Route::any('cache1', [
+    'uses' => 'CacheController@cache1',
+    'as' => 'cache1'
+]);
+
+Route::any('cache2', [
+    'uses' => 'CacheController@cache2',
+    'as' => 'cache2'
 ]);
