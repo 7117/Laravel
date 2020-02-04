@@ -91,5 +91,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Snack-App" />
     <orderEntry type="module" module-name="Snack-App" />
+    <orderEntry type="module" module-name="livevideo" />
+    <orderEntry type="module" module-name="bl_offline_replenish" />
   </component>
 </module>

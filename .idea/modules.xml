@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Laravel.iml" filepath="$PROJECT_DIR$/.idea/Laravel.iml" />
       <module fileurl="file://$PROJECT_DIR$/../fruit/.idea/Snack-App.iml" filepath="$PROJECT_DIR$/../fruit/.idea/Snack-App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bl_offline_replenish/.idea/bl_offline_replenish.iml" filepath="$PROJECT_DIR$/../bl_offline_replenish/.idea/bl_offline_replenish.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../livevideo/.idea/livevideo.iml" filepath="$PROJECT_DIR$/../livevideo/.idea/livevideo.iml" />
     </modules>
   </component>
 </project>
