@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="centos l2.l2.l2">
+  <component name="PublishConfigData" autoUpload="Always" serverName="centos l2.l2.l2">
     <serverData>
       <paths name="centos l2.l2.l2">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$/../fruit" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/example" local="/example" web="/" />
+            <mapping local="" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
