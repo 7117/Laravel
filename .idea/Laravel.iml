@@ -93,5 +93,7 @@
     <orderEntry type="module" module-name="Snack-App" />
     <orderEntry type="module" module-name="livevideo" />
     <orderEntry type="module" module-name="bl_offline_replenish" />
+    <orderEntry type="module" module-name="livevideo" />
+    <orderEntry type="module" module-name="livevideo" />
   </component>
 </module>
