@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../bl_offline_replenish" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../fruit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../l2.l2.l2" vcs="Git" />
   </component>
 </project>
