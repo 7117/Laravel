@@ -3,11 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../PHPCollection/.idea/CodePractice.iml" filepath="$PROJECT_DIR$/../PHPCollection/.idea/CodePractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../FrontendCollection/.idea/FrontendCollection.iml" filepath="$PROJECT_DIR$/../FrontendCollection/.idea/FrontendCollection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JSPractice/.idea/JSPractice.iml" filepath="$PROJECT_DIR$/../JSPractice/.idea/JSPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Laravel.iml" filepath="$PROJECT_DIR$/.idea/Laravel.iml" />
       <module fileurl="file://$PROJECT_DIR$/../fruit/.idea/Snack-App.iml" filepath="$PROJECT_DIR$/../fruit/.idea/Snack-App.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bl_offline_replenish/.idea/bl_offline_replenish.iml" filepath="$PROJECT_DIR$/../bl_offline_replenish/.idea/bl_offline_replenish.iml" />
       <module fileurl="file://$PROJECT_DIR$/../l2.l2.l2/.idea/l2.l2.l2.iml" filepath="$PROJECT_DIR$/../l2.l2.l2/.idea/l2.l2.l2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../livevideo/.idea/livevideo.iml" filepath="$PROJECT_DIR$/../livevideo/.idea/livevideo.iml" />
     </modules>
   </component>
 </project>
