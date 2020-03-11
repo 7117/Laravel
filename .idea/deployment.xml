@@ -5,8 +5,8 @@
       <paths name="centos l2.l2.l2">
         <serverdata>
           <mappings>
-            <mapping deploy="/example" local="/example" web="/" />
             <mapping deploy="/" local="$PROJECT_DIR$/../l2.l2.l2" web="/" />
+            <mapping deploy="/PHPEmailQueue" local="$PROJECT_DIR$/../PHPCollection/PHPEmailQueue" web="/" />
           </mappings>
         </serverdata>
       </paths>

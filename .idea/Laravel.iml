@@ -93,7 +93,6 @@
     <orderEntry type="module" module-name="Snack-App" />
     <orderEntry type="module" module-name="bl_offline_replenish" />
     <orderEntry type="module" module-name="l2.l2.l2" />
-    <orderEntry type="module" module-name="CodePractice" />
     <orderEntry type="module" module-name="l2.l2.l2" />
     <orderEntry type="module" module-name="l2.l2.l2" />
     <orderEntry type="module" module-name="l2.l2.l2" />
@@ -106,5 +105,7 @@
     <orderEntry type="module" module-name="l2.l2.l2" />
     <orderEntry type="module" module-name="l2.l2.l2" />
     <orderEntry type="module" module-name="FrontendCollection" />
+    <orderEntry type="module" module-name="backStageManagement" />
+    <orderEntry type="module" module-name="CodePractice" />
   </component>
 </module>
